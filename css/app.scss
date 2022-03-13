@@ -44,9 +44,51 @@ ol {
 :root {
   --main-color: #19c8fa;
   --secondary-color: #0f748fb3;
-  --padding-section: 15px;
+  --padding-section: 100px;
 }
 /* End Global Rules */
+/* Start Components */
+.main-heading {
+  text-align: center;
+  h2 {
+    position: relative;
+    font-weight: normal;
+    font-size: 40px;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      left: 50%;
+      bottom: -30px;
+      transform: translateX(-50%);
+      width: 120px;
+      background-color: #333;
+    }
+    &::after {
+      content: "";
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      position: absolute;
+      bottom: -40px;
+      background-color: #fff;
+      border: 1px solid #333;
+      transform: translateX(-50%);
+      left: 50%;
+    }
+  }
+  p {
+    width: 550px;
+    margin: 0 auto 100px;
+    max-width: 100%;
+    line-height: 2;
+    color: #777;
+  }
+}
+/* End Components */
 /* Start Header */
 header {
   position: absolute;
@@ -186,6 +228,7 @@ header {
     top: 50%;
     transform: translateY(-50%);
     color: white;
+    cursor: pointer;
     &.left {
       left: 30px;
     }
@@ -209,6 +252,7 @@ header {
       border-radius: 50%;
       border: 1px solid #fff;
       margin-right: 5px;
+      cursor: pointer;
       &.active,
       &:hover {
         background-color: var(--main-color);
@@ -218,3 +262,43 @@ header {
   }
 }
 /* End landing */
+/* Start Service */
+.service {
+  padding-top: var(--padding-section);
+  padding-bottom: var(--padding-section);
+  .services-container {
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      column-gap: 40px;
+      row-gap: 60px;
+    }
+    .box {
+      display: flex;
+
+      i {
+        margin-right: 40px;
+        @media (max-width: 767px) {
+          margin: 0 0 30px;
+        }
+      }
+      .text {
+        h3 {
+          margin-bottom: 30px;
+          color: var(--main-color);
+        }
+        p {
+          line-height: 2;
+          color: #777;
+        }
+      }
+      @media (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+/* End Service */
