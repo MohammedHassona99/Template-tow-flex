@@ -474,7 +474,7 @@ header nav .form i {
 }
 
 .design .text ul li::before {
-  font-family: "FontAwesome";
+  font-family: "Font Awesome 5 Brands";
   content: "\f390";
   font-weight: 900;
   margin-right: 20px;
@@ -596,7 +596,7 @@ header nav .form i {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .video video {
@@ -656,4 +656,88 @@ header nav .form i {
 }
 
 /* End About Us */
+/* Start Statistics */
+.statistics {
+  padding-top: var(--padding-section);
+  padding-bottom: var(--padding-section);
+  text-align: center;
+  background-image: url("./../images/stats.png");
+  background-size: cover;
+  position: relative;
+}
+
+.statistics::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.statistics .container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.statistics .container .box {
+  color: white;
+  padding: 50px;
+  background-color: var(--secondary-color);
+}
+
+.statistics .container .box i {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: black;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  margin: 0 auto 30px;
+}
+
+.statistics .container .box .number {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 0 0 20px;
+}
+
+.statistics .container .box p {
+  font-size: 14px;
+}
+
+@media (max-width: 767px) {
+  .statistics .container .box {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .statistics .container .box {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .statistics .container .box {
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
+  }
+}
+
+/* ENd Statistics */
 /*# sourceMappingURL=app.css.map */
