@@ -10,7 +10,7 @@ html {
 }
 body {
   font-family: "Open Sans", sans-serif;
-  height: 6000px;
+  height: 7000px;
 }
 ul,
 ol {
@@ -550,3 +550,120 @@ header {
   }
 }
 /* ENd Statistics */
+/* Start Our Skills */
+.our-skills {
+  padding-top: var(--padding-section);
+  padding-bottom: var(--padding-section);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media (min-width: 992px) {
+      > div {
+        flex-basis: 45%;
+      }
+    }
+    > div > h3 {
+      margin: 0 0 30px;
+      font-weight: normal;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    > div > p {
+      color: #777;
+      line-height: 2;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .testimonials {
+      .content {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        @media (max-width: 767px) {
+          flex-direction: column;
+          text-align: center;
+        }
+        img {
+          width: 100px;
+          border-radius: 50%;
+          margin-right: 50px;
+          @media (max-width: 767px) {
+            margin: 0 auto 30px;
+          }
+        }
+        .text {
+          line-height: 1.8;
+          border-bottom: 1px solid #ccc;
+          p {
+            color: #777;
+            text-align: right;
+            font-size: 14px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+      .bullets {
+        display: flex;
+        justify-content: center;
+        margin: 50px 0;
+        li {
+          width: 14px;
+          height: 14px;
+          border: 1px solid #aaa;
+          border-radius: 50%;
+          margin-right: 10px;
+          cursor: pointer;
+          &.active {
+            background-color: var(--main-color);
+            border-color: var(--main-color);
+          }
+        }
+      }
+    }
+    .skills {
+      .progress-holder {
+        margin-bottom: 40px;
+        h4 {
+          margin-bottom: 15px;
+          font-weight: normal;
+          text-transform: uppercase;
+        }
+        .prog {
+          background-color: #dedadc;
+          height: 30px;
+
+          span {
+            display: block;
+            background-color: var(--main-color);
+            height: 100%;
+            position: relative;
+            &::before {
+              content: attr(data-progress);
+              position: absolute;
+              background-color: black;
+              color: white;
+              top: -40px;
+              right: -18px;
+              padding: 4px 0;
+              width: 40px;
+              text-align: center;
+              border-radius: 4px;
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              border-width: 8px;
+              border-style: solid;
+              border-color: black transparent transparent transparent;
+              right: -8px;
+              top: -15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* End Our Skills */
