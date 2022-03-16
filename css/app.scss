@@ -45,6 +45,22 @@ ol {
   --secondary-color: #0f748fb3;
   --padding-section: 100px;
 }
+.scroll-to-top {
+  position: fixed;
+  bottom: 15px;
+  right: -40px;
+  background-color: var(--main-color);
+  padding: 8px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
+  font-weight: bold;
+  transition: 0.3s;
+  &.show {
+    right: 15px;
+  }
+}
 /* End Global Rules */
 /* Start Components */
 .main-heading {
