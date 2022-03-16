@@ -933,6 +933,47 @@ header {
 
 /* Start Footer */
 footer {
-  padding-top: var(--padding-section);
+  padding-top: calc(var(--padding-section) / 2);
+  padding-bottom: calc(var(--padding-section) / 2);
+  background-image: url("./../images/subscribe.jpg");
+  background-size: cover;
+  text-align: center;
+  position: relative;
+  color: white;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.75);
+  }
+  .container {
+    position: relative;
+    img {
+      margin-bottom: 20px;
+    }
+    p:not(.copyright) {
+      text-transform: uppercase;
+      padding: 20px;
+      border-bottom: 1px solid white;
+      font-size: 20px;
+      width: fit-content;
+      margin: 20px auto;
+    }
+    .social-icons {
+      i {
+        padding: 10px 15px;
+      }
+    }
+    .copyright {
+      margin-top: 60px;
+      span {
+        font-weight: bold;
+        color: var(--main-color);
+      }
+    }
+  }
 }
 /* End Footer */
